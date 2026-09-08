@@ -29,15 +29,15 @@ Interactive Swagger docs are available for free at **http://localhost:8000/docs*
 
 ## Endpoints
 
-| Method | Path          | Description                          | Success | Errors |
-|--------|---------------|---------------------------------------|---------|--------|
-| GET    | `/`           | API info                              | 200     | —      |
-| GET    | `/health`     | Health check                          | 200     | —      |
-| GET    | `/tasks`      | List all tasks                        | 200     | —      |
-| GET    | `/tasks/{id}` | Get one task                          | 200     | 404 if id doesn't exist |
-| POST   | `/tasks`      | Create a task (`{"title": "..."}`)    | 201     | 400 if title missing/empty |
-| PUT    | `/tasks/{id}` | Update a task's title and/or done     | 200     | 404 if id doesn't exist, 400 if body invalid |
-| DELETE | `/tasks/{id}` | Delete a task                         | 204     | 404 if id doesn't exist |
+| Method | Path          | Description                        | Success | Errors                                       |
+| ------ | ------------- | ---------------------------------- | ------- | -------------------------------------------- |
+| GET    | `/`           | API info                           | 200     | —                                            |
+| GET    | `/health`     | Health check                       | 200     | —                                            |
+| GET    | `/tasks`      | List all tasks                     | 200     | —                                            |
+| GET    | `/tasks/{id}` | Get one task                       | 200     | 404 if id doesn't exist                      |
+| POST   | `/tasks`      | Create a task (`{"title": "..."}`) | 201     | 400 if title missing/empty                   |
+| PUT    | `/tasks/{id}` | Update a task's title and/or done  | 200     | 404 if id doesn't exist, 400 if body invalid |
+| DELETE | `/tasks/{id}` | Delete a task                      | 204     | 404 if id doesn't exist                      |
 
 All errors return JSON in the shape `{"error": "..."}`.
 
@@ -62,8 +62,7 @@ content-type: application/json
    click **Execute**. Try the full cycle: `POST /tasks`, `GET /tasks`,
    `PUT /tasks/{id}`, `DELETE /tasks/{id}`.
 
-**Screenshot:** _add a screenshot of `/docs` here (e.g. `swagger.png`) before
-submitting — take it on your own machine after running the server locally._
+**Screenshot:** `swagger.png`
 
 ## The mortality experiment
 
