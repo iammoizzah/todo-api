@@ -84,7 +84,7 @@ def update_task(task_id: int, body: TaskUpdate):
         raise HTTPException(status_code=404, detail=f"Task {task_id} not found")
 
     if body.title is None and body.done is None:
-        raise HTTPException(status_code=400, detail="provide title and/or done to update")
+        raise HTTPException(status_code=400, detail="provide title and/or done update")
     if body.title is not None and not body.title.strip():
         raise HTTPException(status_code=400, detail="title cannot be empty")
 
