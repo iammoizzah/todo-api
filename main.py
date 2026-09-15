@@ -18,7 +18,7 @@ class TaskUpdate(BaseModel):
 
 @app.exception_handler(HTTPException)
 async def http_error_handler(request: Request, exc: HTTPException):
-    # The assignment wants {"error": "..."} instead of FastAPI's default {"detail": "..."}
+    
     return JSONResponse(status_code=exc.status_code, content={"error": exc.detail})
 
 # --- In-memory "database" ---------------------------------------------
