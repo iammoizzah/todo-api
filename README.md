@@ -67,6 +67,6 @@ content-type: application/json
 ## The mortality experiment
 
 Create a task, restart the server (`Ctrl+C` then run it again), then
-`GET /tasks`. The task you created is gone — because it only ever lived in a
+`GET /tasks`. The task created is gone — because it only ever lived in a
 Python list in memory, not on disk. This is exactly why Week 3 introduces a
 real database.
